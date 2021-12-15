@@ -21,10 +21,15 @@ export const AppointmentForm = ({
     return `${year}-${month.padStart(2, "0")}-${day.padStart(2, "0")}`;
   };
 
+  const handleContactChange = (e) => {
+    const selectedContact = e.target.value > -1 ? contacts[e.target.value] : null;
+    setContact(selectedContact);
+  };
+
   return (
     <form onSubmit={handleSubmit}>
       <input type='text' value={title} onChange={setTitle} />
-      <ContactPicker />
+      <ContactPicker contacts={contacts} onChange={handleContactChange} />
       <input type='date' value={date} onChange={setDate} min={getTodayString()} />
       <input type='time' value={time} onChange={setTime} />
       <input type='submit' />
