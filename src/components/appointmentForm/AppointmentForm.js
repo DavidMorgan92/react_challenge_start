@@ -38,9 +38,9 @@ AppointmentForm.propTypes = {
   setTitle: PropTypes.func.isRequired,
   contact: PropTypes.object.isRequired,
   setContact: PropTypes.func.isRequired,
-  date: PropTypes.object.isRequired,
+  date: PropTypes.string.isRequired,
   setDate: PropTypes.func.isRequired,
-  time: PropTypes.object.isRequired,
+  time: PropTypes.string.isRequired,
   setTime: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired
 };
