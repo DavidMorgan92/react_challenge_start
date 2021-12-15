@@ -21,9 +21,11 @@ export const ContactsPage = ({
     /*
     Add contact info and clear data
     if the contact name is not a duplicate
+    Also check name is not only whitespace
     */
-    if (!duplicateExists) {
-      addContact({name, phone, email});
+    const trimmedName = name.trim();
+    if (!duplicateExists && trimmedName) {
+      addContact({trimmedName, phone, email});
       setName('');
       setPhone('');
       setEmail('');
