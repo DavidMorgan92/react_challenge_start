@@ -36,11 +36,11 @@ AppointmentForm.propTypes = {
   contacts: PropTypes.array.isRequired,
   title: PropTypes.string.isRequired,
   setTitle: PropTypes.func.isRequired,
-  contact: PropTypes.string.isRequired,
+  contact: PropTypes.object.isRequired,
   setContact: PropTypes.func.isRequired,
-  date: PropTypes.string.isRequired,
+  date: PropTypes.object.isRequired,
   setDate: PropTypes.func.isRequired,
-  time: PropTypes.string.isRequired,
+  time: PropTypes.object.isRequired,
   setTime: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired
 };
