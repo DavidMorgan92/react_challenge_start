@@ -47,9 +47,7 @@ export const ContactsPage = ({
   contacts array variable in props
   */
   useEffect(() => {
-    if (contacts.some(c => c.name === name)) {
-      setDuplicateExists(true);
-    }
+    setDuplicateExists(contacts.some(c => c.name === name));
   }, [contacts, name]);
 
   return (
