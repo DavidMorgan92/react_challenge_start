@@ -70,7 +70,7 @@ export const ContactsPage = ({
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList contacts={contacts} />
+        <TileList objectArray={contacts} />
       </section>
     </div>
   );
