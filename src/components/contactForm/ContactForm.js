@@ -11,9 +11,9 @@ export const ContactForm = ({
 }) => {
   return (
     <form onSubmit={handleSubmit}>
-      <input type='text' value={name} onChange={setName} />
-      <input type='text' value={phone} onChange={setPhone} />
-      <input type='text' value={email} onChange={setEmail} />
+      <input type='text' placeholder='Name' value={name} onChange={setName} />
+      <input type='text' placeholder='Phone Number' value={phone} onChange={setPhone} />
+      <input type='text' placeholder='Email Address' value={email} onChange={setEmail} />
       <input type='submit' />
     </form>
   );
