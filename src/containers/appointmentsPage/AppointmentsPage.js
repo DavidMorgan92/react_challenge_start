@@ -24,7 +24,7 @@ export const AppointmentsPage = ({
     */
     addAppointment({
       title,
-      contact,
+      contact: contact.name,
       date,
       time
     });
