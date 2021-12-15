@@ -30,6 +30,18 @@ export const ContactsPage = ({
     }
   };
 
+  const handleNameChange = (e) => {
+    setName(e.target.value);
+  };
+
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
   /*
   Using hooks, check for contact name in the 
   contacts array variable in props
@@ -47,11 +59,11 @@ export const ContactsPage = ({
         {duplicateExists && <p>A contact with this name already exists</p>}
         <ContactForm
           name={name}
-          setName={setName}
+          setName={handleNameChange}
           phone={phone}
-          setPhone={setPhone}
+          setPhone={handlePhoneChange}
           email={email}
-          setEmail={setEmail}
+          setEmail={handleEmailChange}
           handleSubmit={handleSubmit}
         />
       </section>
