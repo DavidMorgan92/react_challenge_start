@@ -1,6 +1,11 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
-export const AppointmentsPage = () => {
+export const AppointmentsPage = ({
+  appointments,
+  contacts,
+  addAppointment
+}) => {
   /*
   Define state variables for 
   appointment info
@@ -25,4 +30,10 @@ export const AppointmentsPage = () => {
       </section>
     </div>
   );
+};
+
+AppointmentsPage.propTypes = {
+  appointments: PropTypes.array.isRequired,
+  contacts: PropTypes.array.isRequired,
+  addAppointment: PropTypes.func.isRequired
 };
