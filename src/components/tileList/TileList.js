@@ -15,5 +15,5 @@ export const TileList = ({
 };
 
 TileList.propTypes = {
-  objectArray: PropTypes.array
+  objectArray: PropTypes.array.isRequired
 };
