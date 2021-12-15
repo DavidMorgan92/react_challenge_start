@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { ContactForm } from '../../components/contactForm/ContactForm';
 
-export const ContactsPage = () => {
+export const ContactsPage = ({
+  contacts,
+  addContact
+}) => {
   /*
   Define state variables for 
   contact info and duplicate check
   */
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +29,16 @@ export const ContactsPage = () => {
   return (
     <div>
       <section>
-        <h2>Add Contact</h2> 
+        <h2>Add Contact</h2>
+        <ContactForm
+          name={name}
+          setName={setName}
+          phone={phone}
+          setPhone={setPhone}
+          email={email}
+          setEmail={setEmail}
+          handleSubmit={handleSubmit}
+        />
       </section>
       <hr />
       <section>
