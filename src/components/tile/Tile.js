@@ -9,7 +9,7 @@ export const Tile = ({
       {
         Object.values(object).map((value, index) => {
           return (
-            <p className={index === 0 ? 'tile-title' : 'tile'}>
+            <p key={index} className={index === 0 ? 'tile-title' : 'tile'}>
               {value}
             </p>
           );
