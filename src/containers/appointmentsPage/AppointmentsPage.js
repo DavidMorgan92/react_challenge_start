@@ -30,8 +30,8 @@ export const AppointmentsPage = ({
     });
     setTitle('');
     setContact({});
-    setDate(null);
-    setTime(null);
+    setDate('');
+    setTime('');
   };
 
   const handleTitleChange = (e) => {
