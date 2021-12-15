@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 export const AppointmentForm = ({
   contacts,
@@ -22,4 +23,17 @@ export const AppointmentForm = ({
   return (
     AppointmentForm
   );
+};
+
+AppointmentForm.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
+  setTitle: PropTypes.func.isRequired,
+  contact: PropTypes.string.isRequired,
+  setContact: PropTypes.func.isRequired,
+  date: PropTypes.string.isRequired,
+  setDate: PropTypes.func.isRequired,
+  time: PropTypes.string.isRequired,
+  setTime: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
