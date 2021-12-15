@@ -25,7 +25,7 @@ export const ContactsPage = ({
     */
     const trimmedName = name.trim();
     if (!duplicateExists && trimmedName) {
-      addContact({trimmedName, phone, email});
+      addContact({name: trimmedName, phone, email});
       setName('');
       setPhone('');
       setEmail('');
