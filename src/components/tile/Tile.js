@@ -7,7 +7,7 @@ export const Tile = ({
   return (
     <div className="tile-container">
       {
-        object.values.map((value, index) => {
+        Object.values(object).map((value, index) => {
           return (
             <p className={index === 0 ? 'tile-title' : 'tile'}>
               {value}
