@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from 'prop-types';
+import { ContactPicker } from '../contactPicker/ContactPicker';
 
 export const AppointmentForm = ({
   contacts,
@@ -21,7 +22,13 @@ export const AppointmentForm = ({
   };
 
   return (
-    AppointmentForm
+    <form onSubmit={handleSubmit}>
+      <input type='text' value={title} onChange={setTitle} />
+      <ContactPicker />
+      <input type='date' value={date} onChange={setDate} min={getTodayString()} />
+      <input type='time' value={time} onChange={setTime} />
+      <input type='submit' />
+    </form>
   );
 };
 
