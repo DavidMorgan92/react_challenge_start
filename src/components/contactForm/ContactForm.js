@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 export const ContactForm = ({
   name,
@@ -17,4 +18,14 @@ export const ContactForm = ({
       <input type='submit' />
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  name: PropTypes.string.isRequired,
+  setName: PropTypes.func.isRequired,
+  phone: PropTypes.string.isRequired,
+  setPhone: PropTypes.func.isRequired,
+  email: PropTypes.string.isRequired,
+  setEmail: PropTypes.func.isRequired,
+  handleSubmit: PropTypes.func.isRequired
 };
