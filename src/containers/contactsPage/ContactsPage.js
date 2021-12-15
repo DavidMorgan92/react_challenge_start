@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
 import { ContactForm } from '../../components/contactForm/ContactForm';
 
 export const ContactsPage = ({
@@ -59,4 +60,9 @@ export const ContactsPage = ({
       </section>
     </div>
   );
+};
+
+ContactsPage.propTypes = {
+  contacts: PropTypes.array.isRequired,
+  addContact: PropTypes.func.isRequired
 };
