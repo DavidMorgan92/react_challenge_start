@@ -8,7 +8,7 @@ export const TileList = ({
   return (
     <div>
       {
-        objectArray.map(o => <Tile object={o} />)
+        objectArray.map((o, index) => <Tile key={index} object={o} />)
       }
     </div>
   );
