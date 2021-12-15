@@ -38,8 +38,8 @@ export const AppointmentsPage = ({
     setTitle(e.target.value);
   };
 
-  const handleContactChange = (e) => {
-    setContact(e.target.value);
+  const handleContactChange = (contact) => {
+    setContact(contact);
   };
 
   const handleDateChange = (e) => {
